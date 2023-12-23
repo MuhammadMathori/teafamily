@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet" />
     <!-- style -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <!-- my icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- navbar awal -->
@@ -23,10 +24,40 @@
         <a href="#contact">Kontak</a>
       </div>
       <div class="navbar-extra">
-        <a href="#" id="search"><i class="bi bi-search"></i></a>
-        <a href="#" id="shopping-cart"><i class="bi bi-cart"></i></a>
-        <a href="#" id="hamburger-menu"><i class="bi bi-list"></i></a>
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
+
+      <!-- search form awal -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box">
+          <i data-feather="search"></i>
+        </label>
+      </div>
+      <!-- search form akhir -->
+
+      <!-- shopping-cart awal -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/menu/poci.jpg" alt="menu-1" />
+          <div class="item-detail">
+            <h3>Produk 1</h3>
+            <div class="item-price">IDR 5K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-items"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/menu/poci.jpg" alt="menu-1" />
+          <div class="item-detail">
+            <h3>Produk 1</h3>
+            <div class="item-price">IDR 5K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-items"></i>
+        </div>
+      </div>
+      <!-- shopping-cart akhir -->
     </nav>
     <!-- navbar akhir -->
 
@@ -56,7 +87,7 @@
     <!-- about section akhir -->
 
     <!-- menu section awal -->
-    <section id="menu" class="menu">
+    <!-- <section id="menu" class="menu">
       <h2>Menu <span>Kami</span></h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem sequi aliquam enim blanditiis possimus perferendis non impedit nihil reiciendis dolorem?</p>
       <div class="row">
@@ -91,7 +122,75 @@
           <p class="menu-card-price">IDR 5K</p>
         </div>
       </div>
+    </section> -->
+
+    <section id="menu" class="menu">
+      <h2>Menu <span>Kami</span></h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam est laborum dolore aperiam vel.</p>
+      <div class="row">
+        <div class="menu-card">
+          <div class="menu-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="menu-image">
+            <img src="img/menu/poci.jpg" alt="menu-1" />
+          </div>
+          <div class="menu-content">
+            <h3>Teh Poci Original</h3>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="menu-price">IDR 5K</div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="menu-image">
+            <img src="img/menu/poci.jpg" alt="menu-1" />
+          </div>
+          <div class="menu-content">
+            <h3>Teh Poci Coklat</h3>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="menu-price">IDR 5K</div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="menu-image">
+            <img src="img/menu/poci.jpg" alt="menu-1" />
+          </div>
+          <div class="menu-content">
+            <h3>Teh Poci Stobery</h3>
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="menu-price">IDR 5K</div>
+          </div>
+        </div>
+      </div>
     </section>
+
     <!-- menu section akhir -->
 
     <!-- contact section awal -->
@@ -107,16 +206,16 @@
           class="maps"></iframe>
         <form action="">
           <div class="input-group">
-            <i class="bi bi-person"></i>
-            <input type="text" placeholder="name" />
+            <i data-feather="user"></i>
+            <input type="text" placeholder="Nama" />
           </div>
           <div class="input-group">
-            <i class="bi bi-envelope-at"></i>
-            <input type="email" placeholder="email" />
+            <i data-feather="mail"></i>
+            <input type="email" placeholder="Email" />
           </div>
           <div class="input-group">
-            <i class="bi bi-telephone"></i>
-            <input type="text" placeholder="phone" />
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="Phone" />
           </div>
           <button type="submit" class="btn">Kirim Pesan</button>
         </form>
@@ -127,15 +226,43 @@
     <!-- footer section awal -->
     <footer id="footer" class="footer">
       <div class="social">
-        <a href="https://instagram.com/mmathori__"><i class="bi bi-instagram"></i></a>
-        <a href="https://twitter.com/mthor99"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.linkedin.com/in/muhammad-mathori-abdul-jalil-551597282/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://instagram.com/mmathori__"><i data-feather="instagram"></i></a>
+        <a href="https://twitter.com/mthor99"><i data-feather="twitter"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-mathori-abdul-jalil-551597282/"><i data-feather="linkedin"></i></a>
       </div>
       <div class="credit">
         <p>Dibuat Oleh <a href="https://muhammadmathori.github.io/portfolio/">Muhammad Mathori Abdul Jalil</a> | &copy; 2023.</p>
       </div>
     </footer>
-    <!-- footer section awal -->
+    <!-- footer section akhir -->
+
+    <!-- modal box detail item awal -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/menu/poci.jpg" alt="menu-1" />
+          <div class="product-content">
+            <h3>Product 1</h3>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quasi neque quas consequatur cumque similique voluptates dicta, blanditiis hic sequi.
+            <div class="menu-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="menu-price">IDR 5K</div>
+            <a href="#"><i data-feather="shopping-cart"></i><span>add to cart</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal box detail item akhir -->
+
     <script src="js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
