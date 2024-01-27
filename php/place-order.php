@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*Install Midtrans PHP Library (https://github.com/Midtrans/midtrans-php)
 composer require midtrans/midtrans-php
                               
@@ -14,6 +14,7 @@ require_once dirname(__FILE__) . '/midtrans-php-master/Midtrans.php';
 
 // Set your Merchant Server Key
 \Midtrans\Config::$serverKey = 'SB-Mid-server-s9Fq6zzaW_TXjLrIJiNg7iAD';
+\Midtrans\Config::$clientKey = 'SB-Mid-client-HyF1DDImFAsUk8zw';
 // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
 \Midtrans\Config::$isProduction = false;
 // Set sanitization on (default)
@@ -36,4 +37,3 @@ $params = array(
 
 $snapToken = \Midtrans\Snap::getSnapToken($params);
 echo $snapToken;
-?>
