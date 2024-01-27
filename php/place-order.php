@@ -8,7 +8,7 @@ the file manually.
 
 require_once dirname(__FILE__) . '/pathofproject/Midtrans.php'; */
 
-require_once dirname(__FILE__) . '/midtrans-php-master/Midtrans.php';
+require_once dirname(__FILE__) . 'php/midtrans-php-master/Midtrans.php';
 
 //SAMPLE REQUEST START HERE
 
